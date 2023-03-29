@@ -58,6 +58,24 @@ const TagForm = (props) => {
 
         <FieldError name="color" className="rw-field-error" />
 
+        <Label
+          name="link"
+          className="rw-label"
+          errorClassName="rw-label rw-label-error"
+        >
+          Link
+        </Label>
+
+        <TextField
+          name="link"
+          defaultValue={props.tag?.link}
+          className="rw-input"
+          errorClassName="rw-input rw-input-error"
+          validation={{ required: true }}
+        />
+
+        <FieldError name="link" className="rw-field-error" />
+
         <div className="rw-button-group">
           <Submit disabled={props.loading} className="rw-button rw-button-blue">
             Save

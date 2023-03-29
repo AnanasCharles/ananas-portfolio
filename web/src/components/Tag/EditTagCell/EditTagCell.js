@@ -11,6 +11,7 @@ export const QUERY = gql`
       id
       name
       color
+      link
     }
   }
 `
@@ -20,6 +21,7 @@ const UPDATE_TAG_MUTATION = gql`
       id
       name
       color
+      link
     }
   }
 `

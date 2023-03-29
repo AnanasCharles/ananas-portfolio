@@ -21,12 +21,13 @@ const Project = ({ data }) => {
               </div>
 
               {data?.tags.map((tag, index) => (
-                <div
-                  key={index}
-                  className={`pill ${tag?.tag.color} ml-4 inline-block`}
-                >
-                  {tag.tag.name}
-                </div>
+                <Link to={tag.tag.link} key={index}>
+                  <div
+                    className={`pill ${tag?.tag.color} animated-project-pill ml-4 inline-block`}
+                  >
+                    {tag.tag.name}
+                  </div>
+                </Link>
               ))}
 
               {/* <div className="pill redwoodjs ml-4 inline-block">RedwoodJS</div>

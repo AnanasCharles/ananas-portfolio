@@ -21,21 +21,22 @@ describe('tags', () => {
 
   scenario('creates a tag', async () => {
     const result = await createTag({
-      input: { name: 'String6485281', color: 'String' },
+      input: { name: 'String8625904', color: 'String', link: 'String' },
     })
 
-    expect(result.name).toEqual('String6485281')
+    expect(result.name).toEqual('String8625904')
     expect(result.color).toEqual('String')
+    expect(result.link).toEqual('String')
   })
 
   scenario('updates a tag', async (scenario) => {
     const original = await tag({ id: scenario.tag.one.id })
     const result = await updateTag({
       id: original.id,
-      input: { name: 'String49849712' },
+      input: { name: 'String69673822' },
     })
 
-    expect(result.name).toEqual('String49849712')
+    expect(result.name).toEqual('String69673822')
   })
 
   scenario('deletes a tag', async (scenario) => {

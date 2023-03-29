@@ -42,6 +42,7 @@ const TagsList = ({ tags }) => {
             <th>Id</th>
             <th>Name</th>
             <th>Color</th>
+            <th>Link</th>
             <th>&nbsp;</th>
           </tr>
         </thead>
@@ -51,6 +52,7 @@ const TagsList = ({ tags }) => {
               <td>{truncate(tag.id)}</td>
               <td>{truncate(tag.name)}</td>
               <td>{truncate(tag.color)}</td>
+              <td>{truncate(tag.link)}</td>
               <td>
                 <nav className="rw-table-actions">
                   <Link

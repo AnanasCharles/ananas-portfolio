@@ -51,6 +51,10 @@ const Tag = ({ tag }) => {
               <th>Color</th>
               <td>{tag.color}</td>
             </tr>
+            <tr>
+              <th>Link</th>
+              <td>{tag.link}</td>
+            </tr>
           </tbody>
         </table>
       </div>

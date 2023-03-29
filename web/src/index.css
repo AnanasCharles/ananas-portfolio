@@ -24,6 +24,10 @@
   @apply py-0.5 px-2 rounded-sm font-semibold text-sm;
  }
 
+ .animated-project-pill {
+  @apply transition duration-200 hover:-translate-y-1 hover:shadow-md
+ }
+
  .javascript {
   @apply bg-javascript text-black;
  }

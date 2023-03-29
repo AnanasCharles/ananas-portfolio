@@ -3,6 +3,7 @@ export const schema = gql`
     id: Int!
     name: String!
     color: String!
+    link: String!
     projects: [ProjectTags]!
   }
 
@@ -14,11 +15,13 @@ export const schema = gql`
   input CreateTagInput {
     name: String!
     color: String!
+    link: String!
   }
 
   input UpdateTagInput {
     name: String
     color: String
+    link: String
   }
 
   type Mutation {
