@@ -30,9 +30,7 @@ const HomePage = () => {
                   cursus eget nunc scelerisque viverra mauris in aliquam.
                 </div>
                 <div className="mx-auto mt-4 place-items-end content-end justify-end">
-                  <button className="rounded-full bg-yellow-500/20 px-4 py-1 transition duration-200 ease-in-out hover:bg-yellow-500/40 active:bg-yellow-500">
-                    Read
-                  </button>
+                  <button className="read-button">Read</button>
                 </div>
               </div>
             </div>
@@ -49,14 +47,12 @@ const HomePage = () => {
                   cursus eget nunc scelerisque viverra mauris in aliquam.
                 </div>
                 <div className="mx-auto mt-4 place-items-end content-end justify-end">
-                  <button className="rounded-full bg-yellow-500/20 px-4 py-1 transition duration-200 ease-in-out hover:bg-yellow-500/40 active:bg-yellow-500">
-                    Read
-                  </button>
+                  <button className="read-button">Read</button>
                 </div>
               </div>
             </div>
 
-            <div className="max-w-sm rounded-xl bg-gray-800">
+            <div className="max-h-full max-w-sm rounded-xl bg-gray-800">
               {/* Blog Content */}
               <div className="post-content flex flex-col p-8">
                 <div className="mx-auto text-xl">Lorem Ipsum Post</div>
@@ -65,12 +61,9 @@ const HomePage = () => {
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Orci dapibus ultrices in iaculis nunc sed. Urna molestie at
                   elementum eu facilisis sed odio morbi quis. Venenatis urna
-                  cursus eget nunc scelerisque viverra mauris in aliquam.
                 </div>
                 <div className="mx-auto mt-4 place-items-end content-end justify-end">
-                  <button className="rounded-full bg-yellow-500/20 px-4 py-1 transition duration-200 ease-in-out hover:bg-yellow-500/40 active:bg-yellow-500">
-                    Read
-                  </button>
+                  <button className="read-button">Read</button>
                 </div>
               </div>
             </div>
