@@ -10,6 +10,16 @@ module.exports = {
         react: '#61DBFB',
         graphql: '#e10098',
       },
+      rotate: {
+        360: '360deg',
+      },
+      scale: {
+        112: '1.12',
+        88: '0.88',
+        87: '0.87',
+        85: '0.85',
+        80: '0.8',
+      },
     },
   },
   plugins: [require('@headlessui/tailwindcss')({ prefix: 'ui' })],

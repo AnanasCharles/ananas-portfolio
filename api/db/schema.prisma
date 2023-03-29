@@ -46,3 +46,11 @@ model ProjectTags {
   projectId Int?
   tagId     Int?
 }
+
+model BlogPost {
+  id        Int      @id @default(autoincrement())
+  cover     String?
+  title     String
+  markdown  String
+  published DateTime
+}

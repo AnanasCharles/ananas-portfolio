@@ -30,10 +30,6 @@ const Project = ({ data }) => {
                 </Link>
               ))}
 
-              {/* <div className="pill redwoodjs ml-4 inline-block">RedwoodJS</div>
-            <div className="pill react ml-4 inline-block">React</div>
-          <div className={`pill graphql ml-4 inline-block`}>GraphQL</div> */}
-
               <div className="ml-8 mt-4"> {data?.description}</div>
             </div>
           </div>
