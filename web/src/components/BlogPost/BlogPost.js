@@ -1,9 +1,13 @@
 import { motion } from 'framer-motion'
+import { ReactMarkdown } from 'react-markdown/lib/react-markdown'
+import rehypeRaw from 'rehype-raw'
+import rehypeSanitize from 'rehype-sanitize'
+import remarkGfm from 'remark-gfm'
 
 const BlogPost = ({ post }) => {
   return (
     <>
-      <div className="my-8 mx-auto">
+      <div className="my-8 mx-auto w-2/3">
         <div className="rounded-xl bg-gray-800">
           {/* Blog Content */}
           {post?.cover ? (
@@ -15,7 +19,15 @@ const BlogPost = ({ post }) => {
             <div className="mx-auto text-4xl font-semibold tracking-wider">
               {post.title}
             </div>
-            <div className="prose-lg mt-4 text-gray-300 ">{post.markdown}</div>
+            <div className="prose-lg mt-4 text-gray-300 ">
+              <ReactMarkdown
+                remarkPlugins={remarkGfm}
+                rehypePlugins={[rehypeRaw, rehypeSanitize]}
+              >
+                {post.markdown}
+              </ReactMarkdown>
+              {/* {post.markdown} */}
+            </div>
           </div>
         </div>
       </div>
