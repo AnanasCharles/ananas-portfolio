@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import { SiRedwoodjs } from 'react-icons/si'
 
 import { Link } from '@redwoodjs/router'
@@ -22,11 +23,13 @@ const Project = ({ data }) => {
 
               {data?.tags.map((tag, index) => (
                 <Link to={tag.tag.link} key={index}>
-                  <div
+                  <motion.div
                     className={`pill ${tag?.tag.color} animated-project-pill ml-4 inline-block`}
+                    whileHover={{ scale: 1.2, y: -5 }}
+                    transition={{ duration: 0.3, ease: 'easeInOut' }}
                   >
                     {tag.tag.name}
-                  </div>
+                  </motion.div>
                 </Link>
               ))}
 
