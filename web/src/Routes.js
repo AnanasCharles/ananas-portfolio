@@ -7,6 +7,8 @@
 // 'src/pages/HomePage/HomePage.js'         -> HomePage
 // 'src/pages/Admin/BooksPage/BooksPage.js' -> AdminBooksPage
 
+import { AnimatePresence, motion } from 'framer-motion'
+
 import { Router, Route, Set, Private } from '@redwoodjs/router'
 
 import ScaffoldLayout from 'src/layouts/ScaffoldLayout'
@@ -38,6 +40,7 @@ const Routes = () => {
         </Set>
       </Private>
       <Set wrap={MainLayout}>
+        <Route path="/blog/{id}" page={PostPage} name="post" />
         <Route path="/blog" page={BlogPage} name="blog" />
         <Route path="/" page={HomePage} name="home" />
         <Route path="/login" page={LoginPage} name="login" />

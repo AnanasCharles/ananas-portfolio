@@ -1,14 +1,17 @@
 import { motion } from 'framer-motion'
 
 import NavigationBar from 'src/components/NavigationBar/NavigationBar'
-
 const MainLayout = ({ children }) => {
   return (
     <>
-      <motion.div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 2 }}
+      >
         <NavigationBar />
-        {children}
       </motion.div>
+      {children}
     </>
   )
 }

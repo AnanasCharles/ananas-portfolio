@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import { FaTwitterSquare, FaGithubSquare } from 'react-icons/fa'
 import { SiCodeberg } from 'react-icons/si'
 
@@ -13,12 +14,21 @@ const AnanasHero = () => {
       </div>
       <div className="flex h-full w-full rounded-md p-8 text-lg">
         <div>
-          <div className="mb-8 text-3xl font-bold tracking-wide transition duration-300 ease-in-out hover:translate-x-16">
+          <motion.div
+            className="mb-8 text-3xl font-bold tracking-wide"
+            initial={{ x: 0 }}
+            whileHover={{ x: 50 }}
+            transition={{ ease: 'easeInOut', duration: 0.25 }}
+          >
             Hi, I'm{' '}
-            <span className="animate-pulse text-4xl text-yellow-500">
+            <motion.span
+              className="text-4xl text-yellow-500"
+              animate={{ opacity: [1, 0, 1] }}
+              transition={{ duration: 5, repeat: Infinity }}
+            >
               Ananas Charles
-            </span>
-          </div>
+            </motion.span>
+          </motion.div>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
