@@ -5,12 +5,25 @@ import { SiCodeberg } from 'react-icons/si'
 const AnanasHero = () => {
   return (
     <div className="mx-auto flex h-full w-full max-w-7xl items-center justify-center space-x-5 px-5 pb-10 pt-20 transition duration-500 ease-in">
-      <div className="flex h-2/6 w-[256px] rounded-full bg-gray-200 transition duration-500 hover:rotate-360">
-        <img
-          src="/images/ananas-avatar.jpg"
-          className="w-[256px] rounded-full"
-          alt="Avatar"
-        />
+      <div className="flex h-2/6 w-[256px] flex-col ">
+        <div className="rounded-full ">
+          <motion.img
+            src="/images/ananas-avatar.jpg"
+            className="w-[256px] rounded-full"
+            alt="Avatar"
+            initial={{ rotate: 0 }}
+            animate={{ rotate: 360 }}
+            transition={{ duration: 1, delay: 1 }}
+          />
+        </div>
+        <motion.div
+          className="mx-auto my-4 text-xl font-bold"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: [0, 1, 0] }}
+          transition={{ duration: 2, delay: 1.5 }}
+        >
+          Backflip!
+        </motion.div>
       </div>
       <div className="flex h-full w-full rounded-md p-8 text-lg">
         <div>

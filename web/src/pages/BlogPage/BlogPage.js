@@ -11,14 +11,17 @@ const BlogPage = () => {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 0.5 }}
+        transition={{
+          duration: 1,
+          delay: 0.5,
+        }}
       >
         <div className="mx-auto h-full w-full max-w-7xl items-center justify-center space-x-5 px-5 py-10">
           <div className="text-3xl">
             <motion.div
               initial={{ x: 0 }}
               whileInView={{ x: 50 }}
-              transition={{ duration: 1 }}
+              transition={{ duration: 1, delay: 1.5 }}
             >
               {'>'} <span className="text-green-500"> Blog Posts</span>
             </motion.div>

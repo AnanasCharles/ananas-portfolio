@@ -52,5 +52,5 @@ model BlogPost {
   cover     String?
   title     String
   markdown  String
-  published DateTime
+  published DateTime @default(now())
 }

@@ -31,7 +31,7 @@ const HomePage = () => {
       <motion.div
         initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1, delay: 0.5 }}
+        transition={{ duration: 1, delay: 1 }}
         viewport={{ once: true }}
       >
         <Projects />
@@ -40,7 +40,7 @@ const HomePage = () => {
       <motion.div
         initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1, delay: 0.5 }}
+        transition={{ duration: 1, delay: 1.5 }}
         viewport={{ once: true }}
       >
         <BlogPosts />
@@ -49,7 +49,7 @@ const HomePage = () => {
       <motion.div
         initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1, delay: 0.5 }}
+        transition={{ duration: 1, delay: 1 }}
         viewport={{ once: true }}
       >
         <div className="mx-auto h-full w-full max-w-7xl items-center justify-center space-x-5 px-5 py-10">

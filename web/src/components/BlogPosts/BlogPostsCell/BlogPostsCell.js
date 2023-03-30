@@ -54,6 +54,7 @@ export const Success = ({ blogPosts }) => {
                 {blogPost.title}
               </div>
               <div className="mt-4">{truncate(blogPost.markdown)}</div>
+              <div>{blogPost.published}</div>
               <div className="mx-auto mt-4 place-items-end content-end justify-end">
                 <Link
                   className="read-button"
