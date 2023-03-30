@@ -1,10 +1,14 @@
+import { motion } from 'framer-motion'
+
 import NavigationBar from 'src/components/NavigationBar/NavigationBar'
 
 const MainLayout = ({ children }) => {
   return (
     <>
-      <NavigationBar />
-      {children}
+      <motion.div>
+        <NavigationBar />
+        {children}
+      </motion.div>
     </>
   )
 }
