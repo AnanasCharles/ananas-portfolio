@@ -24,7 +24,7 @@ const BlogPost = ({ post }) => {
               <div className="mx-auto text-4xl font-semibold tracking-wider">
                 {post.title}
               </div>
-              <div className="prose-lg mt-4 text-gray-300 ">
+              <div className="prose-lg mt-8 text-gray-300 ">
                 <ReactMarkdown
                   remarkPlugins={remarkGfm}
                   rehypePlugins={[rehypeRaw, rehypeSanitize]}

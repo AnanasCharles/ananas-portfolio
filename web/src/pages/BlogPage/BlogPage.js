@@ -1,8 +1,5 @@
 import { motion } from 'framer-motion'
 
-import { Link, routes } from '@redwoodjs/router'
-import { MetaTags } from '@redwoodjs/web'
-
 import BlogPostsCell from 'src/components/BlogPosts/BlogPostsCell/BlogPostsCell'
 
 const BlogPage = () => {
@@ -26,10 +23,11 @@ const BlogPage = () => {
               {'>'} <span className="text-green-500"> Blog Posts</span>
             </motion.div>
           </div>
-          <div className="my-8 flex flex-wrap gap-8">
+          <div className="my-8 flex min-h-[100vh] flex-wrap gap-8">
             {/* Blog Post */}
             <BlogPostsCell />
           </div>
+          <div className="mx-auto">Page 1</div>
         </div>
       </motion.div>
     </>

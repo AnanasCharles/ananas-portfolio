@@ -69,3 +69,7 @@
  .scrollProgress {
   @apply fixed top-0 bottom-0 right-0 w-[5px] origin-top rounded-r-xl bg-yellow-500 z-50
  }
+
+ .form {
+  @apply rounded-lg bg-gray-800 p-2;
+ }

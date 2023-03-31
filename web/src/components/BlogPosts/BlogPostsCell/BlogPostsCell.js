@@ -1,9 +1,12 @@
 import { motion, useScroll, useSpring } from 'framer-motion'
+import { ReactMarkdown } from 'react-markdown/lib/react-markdown'
+import rehypeRaw from 'rehype-raw'
+import rehypeSanitize from 'rehype-sanitize'
+import remarkGfm from 'remark-gfm'
 
 import { Link, routes } from '@redwoodjs/router'
 
 import { truncate } from 'src/lib/formatters'
-
 export const QUERY = gql`
   query BlogPostsQuery($take: Int, $skip: Int) {
     blogPosts(take: $take, skip: $skip) {
@@ -49,13 +52,20 @@ export const Success = ({ blogPosts }) => {
             ) : (
               ''
             )}
-            <div className="post-content flex flex-col p-8">
+            <div className="post-content max-h-lg min-h-lg relative flex h-[275px] flex-col p-8">
               <div className="mx-auto text-xl font-semibold tracking-wider">
                 {blogPost.title}
               </div>
-              <div className="mt-4">{truncate(blogPost.markdown)}</div>
-              <div>{blogPost.published}</div>
-              <div className="mx-auto mt-4 place-items-end content-end justify-end">
+              <div className="mt-4">
+                <ReactMarkdown
+                  remarkPlugins={remarkGfm}
+                  rehypePlugins={[rehypeRaw, rehypeSanitize]}
+                >
+                  {truncate(blogPost.markdown)}
+                </ReactMarkdown>
+              </div>
+              <div className="my-4">Posted: {blogPost.published}</div>
+              <div className="absolute bottom-5 right-5 mx-auto mt-4">
                 <Link
                   className="read-button"
                   to={routes.post({ id: blogPost.id })}

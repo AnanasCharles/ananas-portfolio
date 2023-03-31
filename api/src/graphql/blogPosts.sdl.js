@@ -4,7 +4,7 @@ export const schema = gql`
     cover: String
     title: String!
     markdown: String!
-    published: DateTime!
+    published: DateTime
   }
 
   type Query {
@@ -16,7 +16,7 @@ export const schema = gql`
     cover: String
     title: String!
     markdown: String!
-    published: DateTime!
+    published: DateTime
   }
 
   input UpdateBlogPostInput {
