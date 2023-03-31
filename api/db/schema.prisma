@@ -48,9 +48,9 @@ model ProjectTags {
 }
 
 model BlogPost {
-  id        Int      @id @default(autoincrement())
+  id        Int       @id @default(autoincrement())
   cover     String?
   title     String
   markdown  String
-  published DateTime @default(now())
+  published DateTime? @default(now())
 }
