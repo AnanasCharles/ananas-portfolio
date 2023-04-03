@@ -46,7 +46,7 @@ const HomePage = () => {
         <BlogPosts />
       </motion.div>
 
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, delay: 1 }}
@@ -64,7 +64,7 @@ const HomePage = () => {
           </div>
           <div className="my-8">Newsletter</div>
         </div>
-      </motion.div>
+      </motion.div> */}
     </>
   )
 }

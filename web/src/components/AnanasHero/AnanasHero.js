@@ -42,27 +42,56 @@ const AnanasHero = () => {
               Ananas Charles
             </motion.span>
           </motion.div>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          {/* Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat. Duis aute irure dolor in
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          culpa qui officia deserunt mollit anim id est laborum. */}
+          Hello and welcome to my digital portfolio! As a junior web developer,
+          I'm excited to share my skills and experience in React, Python, C#,
+          and TailwindCSS with you. With a passion for web development and a
+          keen eye for detail, I take pride in crafting stunning web
+          applications and interfaces that meet the needs of my clients. Whether
+          you need a custom React component, a Python backend, a C# desktop app,
+          or a stylish layout with TailwindCSS, I'm confident that I can deliver
+          results that meet your expectations. So please take a look around and
+          see what I've been working on. If you have any questions or want to
+          discuss a project, feel free to get in touch. I'm always open to new
+          opportunities and challenges.
           <div className="my-8 flex items-center gap-4">
-            <FaTwitterSquare
-              size={64}
-              className="inline-block text-blue-500 transition duration-500 ease-in-out hover:origin-center hover:-translate-y-5 hover:-translate-x-4 hover:-rotate-12 hover:scale-125 hover:text-blue-600"
-            />
-            <FaGithubSquare
-              size={64}
-              className="inline-block text-purple-500 transition duration-500 ease-in-out hover:origin-center hover:-translate-y-6 hover:scale-125 hover:text-purple-600"
-            />
+            <a
+              href="https://twitter.com/0xMMMMMMMMMmm"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaTwitterSquare
+                size={64}
+                className="inline-block text-blue-500 transition duration-500 ease-in-out hover:origin-center hover:-translate-y-5 hover:-translate-x-4 hover:-rotate-12 hover:scale-125 hover:text-blue-600"
+              />
+            </a>
 
-            <SiCodeberg
-              size={64}
-              className="inline-block scale-88 rounded-lg bg-blue-300 p-2 text-black transition duration-500 ease-in-out hover:origin-center hover:-translate-y-5 hover:translate-x-4 hover:rotate-12 hover:scale-112 hover:bg-blue-400"
-            />
+            <a
+              href="https://github.com/AnanasCharles/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaGithubSquare
+                size={64}
+                className="inline-block text-purple-500 transition duration-500 ease-in-out hover:origin-center hover:-translate-y-6 hover:scale-125 hover:text-purple-600"
+              />
+            </a>
+            <a
+              href="https://ananascharles.codeberg.page/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <SiCodeberg
+                size={64}
+                className="inline-block scale-88 rounded-lg bg-blue-300 p-2 text-black transition duration-500 ease-in-out hover:origin-center hover:-translate-y-5 hover:translate-x-4 hover:rotate-12 hover:scale-112 hover:bg-blue-400"
+              />
+            </a>
           </div>
         </div>
       </div>
