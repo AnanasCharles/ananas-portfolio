@@ -1,5 +1,5 @@
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
@@ -10,9 +10,47 @@ generator client {
 
 // Define your own datamodels here and run `yarn redwood prisma migrate dev`
 // to create migrations for them and apply to your dev DB.
-// TODO: Please remove the following example:
-model UserExample {
-  id    Int     @id @default(autoincrement())
-  email String  @unique
-  name  String?
+
+model User {
+  id               Int       @id @default(autoincrement())
+  name             String?
+  email            String    @unique
+  hashedPassword   String
+  salt             String
+  resetToken       String?
+  resetTokenExpiry DateTime?
+}
+
+model Project {
+  id          Int    @id @default(autoincrement())
+  name        String
+  description String
+  link        String
+
+  tags ProjectTags[]
+}
+
+model Tag {
+  id    Int    @id @default(autoincrement())
+  name  String @unique
+  color String
+  link  String
+
+  projects ProjectTags[]
+}
+
+model ProjectTags {
+  id        Int      @id @default(autoincrement())
+  project   Project? @relation(fields: [projectId], references: [id])
+  tag       Tag?     @relation(fields: [tagId], references: [id])
+  projectId Int?
+  tagId     Int?
+}
+
+model BlogPost {
+  id        Int       @id @default(autoincrement())
+  cover     String?
+  title     String
+  markdown  String
+  published DateTime? @default(now())
 }

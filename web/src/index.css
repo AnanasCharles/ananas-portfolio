@@ -1,0 +1,75 @@
+/**
+ * START --- SETUP TAILWINDCSS EDIT
+ *
+ * `yarn rw setup ui tailwindcss` placed these imports here
+ * to inject Tailwind's styles into your CSS.
+ * For more information, see: https://tailwindcss.com/docs/installation#include-tailwind-in-your-css
+ */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+/**
+ * END --- SETUP TAILWINDCSS EDIT
+ */
+
+ body {
+  @apply bg-gray-900 text-gray-300 overflow-auto;
+ }
+
+ body::-webkit-scrollbar {
+  display: none
+ }
+
+ body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+ }
+
+ .text-github {
+  color: #6e5494;
+ }
+
+ .pill {
+  @apply py-0.5 px-2 rounded-sm font-semibold text-sm;
+ }
+
+ .animated-project-pill {
+  @apply hover:shadow-md
+ }
+
+ .javascript {
+  @apply bg-javascript text-black;
+ }
+
+ .react {
+  @apply bg-react text-black;
+ }
+
+ .graphql {
+  @apply bg-graphql text-black;
+ }
+
+ .python {
+  @apply bg-python text-black;
+ }
+
+ .typescript {
+  @apply bg-white text-black;
+ }
+
+ .redwoodjs {
+  @apply bg-redwoodjs text-black;
+ }
+
+
+ .read-button {
+  @apply rounded-full bg-yellow-500/20 px-4 py-1 transition duration-200 ease-in-out hover:bg-yellow-500/40 active:bg-yellow-500
+ }
+
+ .scrollProgress {
+  @apply fixed top-0 bottom-0 right-0 w-[5px] origin-top rounded-r-xl bg-yellow-500 z-50
+ }
+
+ .form {
+  @apply rounded-lg bg-gray-800 p-2;
+ }
