@@ -163,7 +163,10 @@ export const handler = async (event, context) => {
     forgotPassword: forgotPasswordOptions,
     login: loginOptions,
     resetPassword: resetPasswordOptions,
-    signup: signupOptions,
+    // signup: signupOptions,
+    signup: {
+      enabled: false,
+    },
   })
 
   return await authHandler.invoke()
